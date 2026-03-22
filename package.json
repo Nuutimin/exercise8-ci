@@ -1,0 +1,14 @@
+{
+  "name": "exercise8-ci",
+  "version": "1.0.0",
+  "description": "Exercise VIII - CI with GitHub Actions and Coveralls",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "vitest": "^3.0.0"
+  }
+}
