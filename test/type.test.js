@@ -1,3 +1,10 @@
+/**
+ * @file type.test.js
+ * @description Tests for type-checking utility functions: isBoolean, isDate,
+ * isObject, isObjectLike, isArrayLike, eq, and defaultTo.
+ * No known bugs in any of these implementations.
+ */
+
 import { describe, it, expect } from 'vitest'
 import isBoolean from '../src/isBoolean.js'
 import isDate from '../src/isDate.js'
@@ -9,6 +16,11 @@ import defaultTo from '../src/defaultTo.js'
 
 describe('Type checking functions', () => {
 
+  /**
+   * @description Tests for isBoolean(value).
+   * Depends on: src/isBoolean.js
+   * No known bugs.
+   */
   describe('isBoolean', () => {
     it('palauttaa true boolean-arvolle', () => {
       expect(isBoolean(true)).toBe(true)
@@ -20,6 +32,11 @@ describe('Type checking functions', () => {
     })
   })
 
+  /**
+   * @description Tests for isDate(value).
+   * Depends on: src/isDate.js
+   * No known bugs.
+   */
   describe('isDate', () => {
     it('palauttaa true Date-oliolle', () => {
       expect(isDate(new Date())).toBe(true)
@@ -30,6 +47,11 @@ describe('Type checking functions', () => {
     })
   })
 
+  /**
+   * @description Tests for isObject(value).
+   * Depends on: src/isObject.js
+   * No known bugs.
+   */
   describe('isObject', () => {
     it('palauttaa true oliolle', () => {
       expect(isObject({})).toBe(true)
@@ -41,6 +63,11 @@ describe('Type checking functions', () => {
     })
   })
 
+  /**
+   * @description Tests for isObjectLike(value).
+   * Depends on: src/isObjectLike.js
+   * No known bugs.
+   */
   describe('isObjectLike', () => {
     it('palauttaa true oliolle', () => {
       expect(isObjectLike({})).toBe(true)
@@ -50,6 +77,11 @@ describe('Type checking functions', () => {
     })
   })
 
+  /**
+   * @description Tests for isArrayLike(value).
+   * Depends on: src/isArrayLike.js
+   * No known bugs.
+   */
   describe('isArrayLike', () => {
     it('palauttaa true taulukolle', () => {
       expect(isArrayLike([1, 2, 3])).toBe(true)
@@ -60,6 +92,11 @@ describe('Type checking functions', () => {
     })
   })
 
+  /**
+   * @description Tests for eq(value, other).
+   * Depends on: src/eq.js
+   * No known bugs. Uses SameValueZero comparison (NaN === NaN is true).
+   */
   describe('eq', () => {
     it('vertaa kahta arvoa', () => {
       expect(eq(1, 1)).toBe(true)
@@ -70,6 +107,11 @@ describe('Type checking functions', () => {
     })
   })
 
+  /**
+   * @description Tests for defaultTo(value, defaultValue).
+   * Depends on: src/defaultTo.js
+   * No known bugs.
+   */
   describe('defaultTo', () => {
     it('palauttaa oletusarvon null-arvolle', () => {
       expect(defaultTo(null, 'default')).toBe('default')
