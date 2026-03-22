@@ -36,7 +36,7 @@ Testit ajetaan automaattisesti GitHub Actionsin avulla jokaisen `push`-tapahtuma
 - **[@vitest/coverage-v8](https://vitest.dev/guide/coverage)** — testikattavuus
 - **[GitHub Actions](https://docs.github.com/en/actions)** — CI-pipeline
 - **[Coveralls](https://coveralls.io/)** — kattavuusraportointi
-
+- **[Claude](https://claude.ai/)** — tuutorointi ja koodausapu
 ## Käyttö
 
 Asenna riippuvuudet:
